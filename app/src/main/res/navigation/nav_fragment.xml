@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/splash_Screen">
+
+    <fragment
+        android:id="@+id/splash_Screen"
+        android:name="com.example.kanvystudio.fragments.Splash_Screen"
+        android:label="fragment_splash__screen"
+        tools:layout="@layout/fragment_splash__screen" >
+        <action
+            android:id="@+id/action_splash_Screen_to_otpEnterFragment"
+            app:destination="@id/otpEnterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpEnterFragment"
+        android:name="com.example.kanvystudio.fragments.OtpEnterFragment"
+        android:label="fragment_otp_enter"
+        tools:layout="@layout/fragment_otp_enter" >
+        <action
+            android:id="@+id/action_otpEnterFragment_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.kanvystudio.fragments.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_step1"
+            app:destination="@id/step1" />
+    </fragment>
+    <fragment
+        android:id="@+id/step1"
+        android:name="com.example.kanvystudio.fragments.Step1"
+        android:label="fragment_step1"
+        tools:layout="@layout/fragment_step1" />
+</navigation>

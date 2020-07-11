@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.OtpEnterFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_photo"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="92dp">
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image_otp"
+            app:layout_constraintCircleRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/otp_sms"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_dotted"
+            android:id="@+id/layout_card"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintTop_toBottomOf="@id/image_otp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/incorrect_text"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Incorrrect OTP"
+                app:layout_constraintTop_toBottomOf="@id/image_otp"
+                tools:layout_editor_absoluteX="-71dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/til_enter_otp"
+                android:backgroundTint="@color/button_color"
+                android:textColorHint="@color/button_color"
+                android:layout_marginTop="30dp"
+                app:boxStrokeWidth="1dp"
+
+                android:focusedByDefault="true"
+                app:layout_constraintTop_toBottomOf="@id/incorrect_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:hint="Enter OTP"
+                    android:background="@color/white"
+                    android:textColor="@color/button_color"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColorHint="@color/button_color"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/til_enter_otp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/linear_layout"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="end"
+                    android:layout_height="wrap_content"
+                    android:text="Didn't get the OTP?   " />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:textColor="#028ebc"
+                    android:fontFamily="@font/bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Resend OTP" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/button_color"
+            android:text="verify"
+            android:id="@+id/verify"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout_card">
+        </com.google.android.material.button.MaterialButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

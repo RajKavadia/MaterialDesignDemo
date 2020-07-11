@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_gravity="center"
+        android:id="@+id/switchAB"
+        android:thumbTint="@color/green"
+        android:layout_width="wrap_content"
+        app:useMaterialThemeColors="true"
+        app:showText="true"
+        android:textSize="8sp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_height="wrap_content"
+        android:showText="true"
+        android:gravity="center"
+        style="@style/Widget.App.Switch"
+        />
+</LinearLayout>
